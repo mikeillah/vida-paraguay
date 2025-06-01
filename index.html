@@ -3,147 +3,730 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Residencia Paraguaya | Reserva tu Consulta Gratuita</title>
-  <meta name="description" content="Obtén la residencia legal en Paraguay con apoyo local. Rápido, transparente y accesible. Reserva tu consulta gratuita hoy." />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap">
+  <title>Residencia Paraguaya | Tu Nueva Vida Sin Impuestos</title>
+  <meta name="description" content="Obtén residencia legal en Paraguay en 45 días. Ahorra miles en impuestos. Más de 500 familias ya viven libres financieramente." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --primary-gradient: linear-gradient(135deg, #1a4942 0%, #2d5d59 100%);
+      --accent-gold: #f4a024;
+      --accent-gold-hover: #e8940f;
+      --bg-cream: #fefbf6;
+      --text-dark: #2d3436;
+      --text-light: #636e72;
+      --success-green: #00b894;
+      --shadow-soft: 0 10px 40px rgba(29, 73, 66, 0.1);
+      --shadow-strong: 0 20px 60px rgba(29, 73, 66, 0.2);
+    }
+    
+    body {
       font-family: 'Outfit', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      background: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
     }
-    header {
-      background-color: #002f6c;
+    
+    /* Hero Section */
+    .hero {
+      background: var(--primary-gradient);
       color: white;
-      padding: 2rem;
+      padding: 80px 20px 120px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
-    header img {
-      height: 60px;
-      margin-bottom: 1rem;
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(244, 160, 36, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
     }
-    h1 {
-      font-size: 2rem;
-      margin: 0.5rem 0;
+    
+    .hero-content {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      z-index: 2;
     }
-    h2 {
-      font-size: 1.2rem;
-      font-weight: 400;
-      margin-bottom: 2rem;
+    
+    .hero-badge {
+      display: inline-block;
+      background: rgba(244, 160, 36, 0.2);
+      color: var(--accent-gold);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(244, 160, 36, 0.3);
     }
-    .cta-buttons {
+    
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 24px;
+      line-height: 1.1;
+    }
+    
+    .hero-highlight {
+      color: var(--accent-gold);
+      position: relative;
+    }
+    
+    .hero-highlight::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--accent-gold);
+      border-radius: 2px;
+    }
+    
+    .hero-subtitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 300;
+      margin-bottom: 40px;
+      opacity: 0.9;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin: 60px 0 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .stat-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 24px;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      display: block;
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-top: 4px;
+    }
+    
+    /* CTA Buttons */
+    .cta-container {
       display: flex;
       flex-direction: column;
+      gap: 16px;
       align-items: center;
+      margin-top: 40px;
     }
-    .cta-buttons a {
-      background-color: #e60026;
+    
+    .cta-primary {
+      background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-hover) 100%);
       color: white;
-      padding: 1rem 2rem;
-      margin: 0.5rem;
+      padding: 18px 40px;
+      border: none;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 600;
       text-decoration: none;
-      border-radius: 8px;
-      display: inline-block;
-      width: 90%;
-      text-align: center;
+      box-shadow: var(--shadow-soft);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      min-width: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
     }
-    .section {
-      padding: 3rem 1.5rem;
-      max-width: 800px;
-      margin: auto;
+    
+    .cta-primary::before {
+      content: '📅';
+      font-size: 20px;
     }
-    .section h3 {
-      color: #002f6c;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
+    
+    .cta-primary:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: var(--shadow-strong);
     }
-    footer {
-      background-color: #002f6c;
+    
+    .cta-secondary {
+      background: transparent;
       color: white;
+      padding: 16px 32px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      min-width: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    
+    .cta-secondary::before {
+      content: '💬';
+      font-size: 18px;
+    }
+    
+    .cta-secondary:hover {
+      background: rgba(37, 211, 102, 0.1);
+      border-color: #25D366;
+      color: #25D366;
+    }
+    
+    /* Section Styling */
+    .section {
+      padding: 100px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: var(--text-dark);
       text-align: center;
-      padding: 2rem;
+      margin-bottom: 60px;
+      position: relative;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: var(--accent-gold);
+      border-radius: 2px;
+    }
+    
+    /* Benefits Grid */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 60px;
+    }
+    
+    .benefit-card {
+      background: white;
+      padding: 40px 32px;
+      border-radius: 20px;
+      box-shadow: var(--shadow-soft);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .benefit-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--accent-gold);
+    }
+    
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-strong);
+    }
+    
+    .benefit-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+    
+    .benefit-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--text-dark);
+    }
+    
+    .benefit-description {
+      color: var(--text-light);
+      font-size: 1rem;
+    }
+    
+    /* Process Steps */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+    
+    .step-card {
+      text-align: center;
+      position: relative;
+    }
+    
+    .step-number {
+      width: 80px;
+      height: 80px;
+      background: var(--primary-gradient);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0 auto 24px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .step-card:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: calc(100% - 40px);
+      width: 100px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-gold), transparent);
+      z-index: 1;
+    }
+    
+    .step-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--text-dark);
+    }
+    
+    .step-description {
+      color: var(--text-light);
+    }
+    
+    /* Pricing Card */
+    .pricing-section {
+      background: white;
+      margin: 80px 20px;
+      border-radius: 24px;
+      padding: 60px 40px;
+      box-shadow: var(--shadow-soft);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .pricing-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(244, 160, 36, 0.05) 0%, transparent 70%);
+    }
+    
+    .pricing-badge {
+      background: var(--success-green);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    
+    .pricing-amount {
+      font-size: 4rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    
+    .pricing-currency {
+      font-size: 1.5rem;
+      color: var(--text-light);
+    }
+    
+    .pricing-description {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: 32px;
+    }
+    
+    /* Testimonials */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 32px;
+      margin-top: 60px;
+    }
+    
+    .testimonial-card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+    }
+    
+    .testimonial-quote {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-dark);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    
+    .author-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--primary-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+    
+    .author-info h4 {
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+    
+    .author-info p {
+      color: var(--text-light);
       font-size: 0.9rem;
     }
+    
+    .stars {
+      color: var(--accent-gold);
+      margin-bottom: 16px;
+    }
+    
+    /* Contact Form */
+    .contact-form {
+      background: white;
+      padding: 50px;
+      border-radius: 24px;
+      box-shadow: var(--shadow-soft);
+      margin-top: 60px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .form-group {
+      margin-bottom: 24px;
+    }
+    
+    .form-input {
+      width: 100%;
+      padding: 16px 20px;
+      border: 2px solid #e9ecef;
+      border-radius: 12px;
+      font-size: 16px;
+      font-family: inherit;
+      transition: all 0.3s ease;
+    }
+    
+    .form-input:focus {
+      outline: none;
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 0 3px rgba(244, 160, 36, 0.1);
+    }
+    
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    .form-submit {
+      background: var(--primary-gradient);
+      color: white;
+      padding: 18px 40px;
+      border: none;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+    
+    .form-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-soft);
+    }
+    
+    /* Floating WhatsApp */
     .floating-whatsapp {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
       color: white;
-      padding: 12px 16px;
+      padding: 16px 20px;
       border-radius: 50px;
       text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      font-weight: 600;
+      box-shadow: var(--shadow-strong);
       z-index: 1000;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .floating-whatsapp:hover {
+      transform: scale(1.05);
+      background: #128c7e;
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--text-dark);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 100px;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 60px 20px 80px;
+      }
+      
+      .section {
+        padding: 60px 20px;
+      }
+      
+      .step-card:not(:last-child)::after {
+        display: none;
+      }
+      
+      .pricing-section {
+        margin: 40px 10px;
+        padding: 40px 20px;
+      }
+      
+      .contact-form {
+        padding: 30px 20px;
+        margin-top: 40px;
+      }
+      
+      .cta-container {
+        gap: 12px;
+      }
+      
+      .cta-primary,
+      .cta-secondary {
+        min-width: 260px;
+      }
+    }
+    
+    /* Animation */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    .cta-primary {
+      animation: pulse 2s infinite;
+    }
+    
+    .cta-primary:hover {
+      animation: none;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="/assets/logo.jpg" alt="Logo" />
-    <h1>Residencia en Paraguay sin complicaciones</h1>
-    <h2>Residencia legal en Paraguay para nómadas digitales, inversores y expatriados</h2>
-    <div class="cta-buttons">
-      <a href="https://calendly.com/yourcalendar">📅 Reserva una consulta gratuita</a>
-      <a href="https://wa.me/595XXXXXXXXX">💬 Habla con nosotros por WhatsApp</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">✨ Más de 500 familias confían en nosotros</div>
+      <h1>Tu Nueva Vida en Paraguay<br><span class="hero-highlight">Sin Impuestos</span></h1>
+      <p class="hero-subtitle">Obtén residencia legal paraguaya en 45 días y ahorra miles de dólares en impuestos cada año. Proceso garantizado con acompañamiento completo.</p>
+      
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">0%</span>
+          <span class="stat-label">Impuestos sobre ingresos del exterior</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">45</span>
+          <span class="stat-label">Días para obtener residencia</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">$15K+</span>
+          <span class="stat-label">Ahorro promedio anual en impuestos</span>
+        </div>
+      </div>
+      
+      <div class="cta-container">
+        <a href="https://calendly.com/yourcalendar" class="cta-primary">Reservar Consulta Gratuita</a>
+        <a href="https://wa.me/595XXXXXXXXX" class="cta-secondary">Hablar por WhatsApp</a>
+      </div>
     </div>
-  </header>
-
-  <section class="section">
-    <h3>¿Por qué Paraguay?</h3>
-    <ul>
-      <li>Sin impuestos sobre ingresos del exterior</li>
-      <li>Bajo coste de vida y economía estable</li>
-      <li>Acceso rápido a la movilidad Mercosur</li>
-      <li>Residencia con una presencia física mínima</li>
-    </ul>
   </section>
 
+  <!-- Benefits Section -->
   <section class="section">
-    <h3>¿Cómo funciona?</h3>
-    <ol>
-      <li><strong>Consulta gratuita:</strong> Evaluamos tu caso y te explicamos los requisitos.</li>
-      <li><strong>Nos encargamos del papeleo:</strong> Certificados, traducciones y citas migratorias.</li>
-      <li><strong>Recibes tu cédula:</strong> Te acompañamos durante todo el proceso hasta obtener tu residencia.</li>
-    </ol>
+    <h2 class="section-title">¿Por qué Paraguay?</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <span class="benefit-icon">💰</span>
+        <h3 class="benefit-title">0% Impuestos Extranjeros</h3>
+        <p class="benefit-description">No pagas impuestos sobre ingresos generados fuera de Paraguay. Mantén el 100% de tus ganancias internacionales.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">🏡</span>
+        <h3 class="benefit-title">Bajo Costo de Vida</h3>
+        <p class="benefit-description">Vive con $800-1200 USD mensuales manteniendo alta calidad de vida. Tu dinero rinde hasta 3x más.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">🌎</span>
+        <h3 class="benefit-title">Libertad Mercosur</h3>
+        <p class="benefit-description">Acceso libre a Argentina, Brasil, Uruguay y Chile. Vive y trabaja en cualquier país del bloque.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">⏰</span>
+        <h3 class="benefit-title">Presencia Mínima</h3>
+        <p class="benefit-description">Solo necesitas estar 1 día cada 3 años para mantener tu residencia. Perfecto para nómadas digitales.</p>
+      </div>
+    </div>
   </section>
 
+  <!-- Process Section -->
   <section class="section">
-    <h3>Precios</h3>
-    <p>Servicio con tarifa fija desde <strong>950 USD</strong>. Sin costes ocultos. Pagas cuando estés listo.</p>
+    <h2 class="section-title">Proceso Simple en 3 Pasos</h2>
+    <div class="process-steps">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3 class="step-title">Consulta Gratuita</h3>
+        <p class="step-description">Evaluamos tu caso personalizado y te explicamos todos los requisitos y beneficios específicos para tu situación.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3 class="step-title">Gestión Completa</h3>
+        <p class="step-description">Nos encargamos de toda la documentación, traducciones, apostillas y citas. Tú solo proporcionas los documentos básicos.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3 class="step-title">Residencia Otorgada</h3>
+        <p class="step-description">Recibes tu cédula paraguaya y comenzás a disfrutar de todos los beneficios fiscales y de movilidad.</p>
+      </div>
+    </div>
   </section>
 
+  <!-- Pricing Section -->
+  <div class="pricing-section">
+    <div class="pricing-badge">💎 Servicio Premium</div>
+    <div class="pricing-amount">$950<span class="pricing-currency">USD</span></div>
+    <p class="pricing-description">Tarifa fija todo incluido. Sin costos ocultos. Garantía de satisfacción 100%</p>
+    <a href="https://calendly.com/yourcalendar" class="cta-primary">Empezar Ahora</a>
+  </div>
+
+  <!-- Testimonials Section -->
   <section class="section">
-    <h3>Casos de Éxito</h3>
-    <p>Más de 500 familias han confiado en nosotros</p>
-    <blockquote>
-      <strong>María Rodríguez</strong><br>
-      Empresaria, España<br>
-      <em>"El proceso fue increíblemente rápido y profesional. En solo 45 días tenía mi residencia paraguaya. El equipo me acompañó en cada paso del proceso."</em>
-    </blockquote>
-    <blockquote>
-      <strong>Carlos López</strong><br>
-      Consultor, Argentina<br>
-      <em>"Excelente atención y seguimiento personalizado. Me ayudaron con todos los documentos y ahora disfruto de los beneficios tributarios de Paraguay."</em>
-    </blockquote>
+    <h2 class="section-title">Casos de Éxito Reales</h2>
+    <div class="testimonials">
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-quote">"En 45 días tenía mi residencia paraguaya. El primer año ahorré $18,000 en impuestos. La mejor inversión que he hecho."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MR</div>
+          <div class="author-info">
+            <h4>María Rodríguez</h4>
+            <p>Empresaria Digital • España</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-quote">"Proceso súper profesional. Me ayudaron con cada documento y ahora vivo entre Paraguay y Argentina sin problemas."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">CL</div>
+          <div class="author-info">
+            <h4>Carlos López</h4>
+            <p>Consultor IT • Argentina</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- Contact Form Section -->
   <section class="section">
-    <h3>Prefieres que te contactemos nosotros?</h3>
-    <form action="https://formspree.io/f/yourformid" method="POST">
-      <input type="text" name="name" placeholder="Tu nombre" required style="width:100%;padding:10px;margin:8px 0;">
-      <input type="email" name="email" placeholder="Tu email" required style="width:100%;padding:10px;margin:8px 0;">
-      <textarea name="message" placeholder="¿En qué podemos ayudarte?" required style="width:100%;padding:10px;margin:8px 0;"></textarea>
-      <button type="submit" style="background-color:#e60026;color:white;padding:12px 20px;border:none;border-radius:8px;">Enviar mensaje</button>
+    <h2 class="section-title">¿Prefieres que Te Contactemos?</h2>
+    <form class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Tu nombre completo" class="form-input" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Tu mejor email" class="form-input" required>
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="Cuéntanos sobre tu situación actual y objetivos..." class="form-input form-textarea" required></textarea>
+      </div>
+      <button type="submit" class="form-submit">Enviar Mensaje</button>
     </form>
   </section>
 
-  <a href="https://wa.me/595XXXXXXXXX" class="floating-whatsapp">💬 WhatsApp</a>
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/595XXXXXXXXX" class="floating-whatsapp">
+    💬 WhatsApp
+  </a>
 
-  <footer>
-    &copy; 2025 Vida Paraguay. Todos los derechos reservados.
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Vida Paraguay. Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
