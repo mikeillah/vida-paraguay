@@ -32,6 +32,11 @@
       font-weight: 400;
       margin-bottom: 2rem;
     }
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     .cta-buttons a {
       background-color: #e60026;
       color: white;
@@ -40,6 +45,8 @@
       text-decoration: none;
       border-radius: 8px;
       display: inline-block;
+      width: 90%;
+      text-align: center;
     }
     .section {
       padding: 3rem 1.5rem;
@@ -57,6 +64,19 @@
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
+    }
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
     }
   </style>
 </head>
@@ -96,15 +116,35 @@
   </section>
 
   <section class="section">
-    <h3>Empieza hoy</h3>
-    <div class="cta-buttons">
-      <a href="https://calendly.com/yourcalendar">📅 Reserva tu consulta gratuita</a>
-      <a href="https://wa.me/595XXXXXXXXX">💬 Escríbenos por WhatsApp</a>
-    </div>
+    <h3>Casos de Éxito</h3>
+    <p>Más de 500 familias han confiado en nosotros</p>
+    <blockquote>
+      <strong>María Rodríguez</strong><br>
+      Empresaria, España<br>
+      <em>"El proceso fue increíblemente rápido y profesional. En solo 45 días tenía mi residencia paraguaya. El equipo me acompañó en cada paso del proceso."</em>
+    </blockquote>
+    <blockquote>
+      <strong>Carlos López</strong><br>
+      Consultor, Argentina<br>
+      <em>"Excelente atención y seguimiento personalizado. Me ayudaron con todos los documentos y ahora disfruto de los beneficios tributarios de Paraguay."</em>
+    </blockquote>
   </section>
+
+  <section class="section">
+    <h3>Prefieres que te contactemos nosotros?</h3>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Tu nombre" required style="width:100%;padding:10px;margin:8px 0;">
+      <input type="email" name="email" placeholder="Tu email" required style="width:100%;padding:10px;margin:8px 0;">
+      <textarea name="message" placeholder="¿En qué podemos ayudarte?" required style="width:100%;padding:10px;margin:8px 0;"></textarea>
+      <button type="submit" style="background-color:#e60026;color:white;padding:12px 20px;border:none;border-radius:8px;">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <a href="https://wa.me/595XXXXXXXXX" class="floating-whatsapp">💬 WhatsApp</a>
 
   <footer>
     &copy; 2025 Vida Paraguay. Todos los derechos reservados.
   </footer>
 </body>
 </html>
+
