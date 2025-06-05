@@ -622,11 +622,20 @@
         </div>
       </div>
       
-      <div class="cta-container">
-        <a href="https://calendly.com/miguel-vidaparaguay" class="cta-primary">Reservar Consulta Gratuita</a>
-          <a href="https://wa.me/5950971191991?text=Hola%2C%20estoy%20interesado%20en%20saber%20m%C3%A1s%20sobre%20Paraguay%2C%20sus%20opciones%20de%20residencia%20y%20fiscalidad." class="cta-secondary" target="_blank">Hablar por WhatsApp</a>
-      </div>
-    </div>
+<div class="cta-container">
+  <a href="https://calendly.com/miguel-vidaparaguay" 
+     class="cta-primary"
+     onclick="gtag('event', 'click_calendly', { event_category: 'CTA', event_label: 'top_calendly' });">
+    Reservar Consulta Gratuita
+  </a>
+  
+  <a href="https://wa.me/5950971191991?text=Hola%2C%20estoy%20interesado%20en%20saber%20m%C3%A1s%20sobre%20Paraguay%2C%20sus%20opciones%20de%20residencia%20y%20fiscalidad." 
+     class="cta-secondary" 
+     target="_blank"
+     onclick="gtag('event', 'click_whatsapp', { event_category: 'CTA', event_label: 'top_whatsapp' });">
+    Hablar por WhatsApp
+  </a>
+</div>
   </section>
 
   <!-- Benefits Section -->
@@ -677,7 +686,9 @@
     <div class="pricing-badge">💎 Servicio Premium</div>
     <div class="pricing-amount">€1200<span class="pricing-currency">EUR</span></div>
     <p class="pricing-description">Tarifa fija todo incluido. Sin costos ocultos. Garantía de satisfacción 100%</p>
-    <a href="https://calendly.com/miguel-vidaparaguay" class="cta-primary">Empezar Ahora</a>
+    <a href="https://calendly.com/miguel-vidaparaguay" class="cta-primary"
+onclick="gtag('event', 'click_calendly', { event_category: 'CTA', event_label: 'pricing_calendly' });">
+Empezar Ahora</a>
   </div>
 
   <!-- Testimonials Section -->
@@ -726,11 +737,14 @@
     </form>
   </section>
 
-  <!-- Floating WhatsApp -->
-<a href="https://wa.me/595971191991?text=Hola%2C%20estoy%20interesado%20en%20saber%20m%C3%A1s%20sobre%20Paraguay%2C%20sus%20opciones%20de%20residencia%20y%20fiscalidad." class="floating-whatsapp" target="_blank">
- onclick="gtag('event', 'click_whatsapp', { event_category: 'CTA', event_label: 'floating_whatsapp' });">
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/595971191991?text=Hola%2C%20estoy%20interesado%20en%20saber%20m%C3%A1s%20sobre%20Paraguay%2C%20sus%20opciones%20de%20residencia%20y%20fiscalidad." 
+   class="floating-whatsapp" 
+   target="_blank"
+   onclick="gtag('event', 'click_whatsapp', { event_category: 'CTA', event_label: 'floating_whatsapp' });">
   💬 WhatsApp
 </a>
+
 
   <!-- Footer -->
   <footer class="footer">
